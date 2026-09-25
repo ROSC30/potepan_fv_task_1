@@ -1,7 +1,6 @@
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 0px;
     height: 70px;
     box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
@@ -17,8 +16,9 @@ header {
     width: 190px;
     margin-top: 10px;
     margin-left: 5px;
-    position: absolute;
-    z-index: 5;
+}
+nav {
+    margin-left:auto;
 }
 ul {
     font-size: 0.8rem;
@@ -27,15 +27,17 @@ ul {
     list-style: none;
     text-align: center;
     gap: 45px;
-    margin-left: 400px;
-    margin-bottom: 20px;  
+    margin-bottom: 20px;
+    margin-left: auto;   
+    margin-right: 40px;  
+    padding: 0;  
 }
 .br-content {
     display: block;
     font-size: 0.6rem;
     margin-top: 5px;
 }
-a{
+a {
     color: black;
     text-decoration: none;
     line-height: 0.1;
@@ -56,8 +58,9 @@ a:hover {
     background-color: #F79214;
     border-radius: 60px;
     line-height: 1.5;
-    margin-right: 20px;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s;  
+    padding: 0;           
+    margin-right: 30px; 
 }
 .button1:hover {
     opacity: 0.7;
@@ -93,6 +96,9 @@ a:hover {
     right: 0;
     width: 775px;
 }
+.fv-phone-ver {
+    display: none;
+}
 .circle-no1 {
     position: absolute;
     top:30%;
@@ -113,7 +119,7 @@ body {
     position: absolute;
     z-index: 3;
     top: 25%;
-    left:8%;
+    left:15%;
 }
 h1 {
     display: block;
@@ -123,7 +129,7 @@ h1 {
 .button2-main {
     position: absolute;
     top:57%;
-    left: 7%;
+    left: 15%;
     width: 490px;
     height: 64px;
     color: white;
@@ -149,5 +155,147 @@ h1 {
     color: #333;
     position: absolute;
     top:66%;
-    left: 8%;
+    left: 15%;
 }
+.HeaderNavHamburger {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+
+@media (max-width:767px) {
+    header {
+        height:48px;
+        border: 0;
+    }
+    .header-logo {
+        margin-left: 9px;
+        align-content: center;
+    }
+    .header-logo-img {
+        position: static; 
+        width: auto;
+        height: 16px;
+    }
+    nav {
+        display: none;
+    }
+    .button1 {
+        display: none;
+    }
+    .HeaderNavHumburger {
+       position: relative;
+       width: 28px;
+       height: 20px;
+       background: none;
+       cursor: pointer;
+       z-index: 101;
+       flex-shrink: 0;
+}
+.HeaderNavHamburger_line {
+    position: absolute;
+    left: 0;
+    width:100%;
+    height: 2px;
+    background: #333;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+.HeaderNavHamburger_line:nth-child(1) { top: 0; }
+.HeaderNavHamburger_line:nth-child(2) {top: 9px; }
+.HeaderNavHamburger_line:nth-child(3) {top: 18px; }
+
+    .fv-phone-ver {
+        display: block;
+        width:100%;
+        height: auto;
+        position: relative;
+        margin-bottom: 0;
+    }
+    .first-view-background {
+        display: none;
+    }
+    .circle-no1 {
+    position: absolute;
+    height: 102px;
+    width: 102px;
+    right: 0px;
+    top: 10px;   
+    transform: translate(45%, -30%);
+  z-index: 3;
+}
+.main-title {
+    display:block;
+    position: static;
+    font-family: "Lato", sans-serif;
+    color: #333;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 36px;
+    margin-bottom:16px;
+}
+.FV {
+    overflow: visible;
+    margin-top: -10px;
+    padding: 0 16px;
+}
+.button2-main {
+    position: static;
+    margin-right: 16px;
+    top:15%;
+    left: 0;
+    width: 361px;
+    height: 64;
+    color: white;
+    background-color: #F79214;
+    border-radius: 38px;
+    line-height: 1.5;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;   
+    font-size: 16px;
+    font-weight: 700;
+}
+.sub-text {
+    font-size: 12px;
+    line-height: 16px;
+    color: #333;
+    font-weight: 500;
+    font-family: 游ゴシック, YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+    position: static;
+}
+.HeaderNavHamburger {
+    order: 1;
+    display: block;
+    width: 28px;
+    height: 12px;
+    margin-left: auto;
+    margin-right: 16px;
+    z-index: 101;
+    flex-shrink: 0;
+}
+.HeaderNavHamburger_line {
+    position: absolute;
+    left: 0px;
+    width: 18px;
+    height: 2px;
+    background: rgb(162, 162, 164);
+    border-radius: 2px;
+    transition: top 0.3s, transform 0.3s, opacity 0.3s;
+}
+.HeaderNavHamburger_line:nth-child(1) { top: 0;}
+.HeaderNavHamburger_line:nth-child(2) { top: 6px;}
+.HeaderNavHamburger_line:nth-child(3) { top: 12px;}
+
+.HeaderNavHamburger.isopen .HeaderNavHamburger_line:nth-child(1) {top:6px; transform: rotate(45deg);}
+.HeaderNavHamburger.isopen .HeaderNavHamburger_line:nth-child(2) {opacity: 0;}
+.HeaderNavHamburger.isopen .HeaderNavHamburger_line:nth-child(3) {top:6px; transform: rotate(-45deg);}
